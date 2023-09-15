@@ -1,21 +1,85 @@
 <script>
-// importo lo store
-import { store } from "../data/store";
+// importo lo store ((non voglio usare lo store a questo livello))
+// import { store } from "../data/store";
+
+// importo axios
+import axios from "axios";
 
 export default {
   data() {
     return {
-      store,
+      // store,
+      results: [],
+
+      serachValue: "",
+      newCallToApi: "",
+      srcMovie: false,
+      srcTV: false,
     };
   },
 
-  methods: {},
+  methods: {
+    search() {
+      fetchTitles(createUrlMovie);
+      console.log(results);
+    },
+
+    createUrlMovie() {
+      this.newCallToApi =
+        this.apiUriFilm + this.apiKey + "&query=" + this.serachValue;
+      return this.newCallToApi;
+    },
+
+    createUrlTV() {
+      this.newCallToApi =
+        this.apiUriTV + this.apiKey + "&query=" + this.serachValue;
+    },
+
+    fetchTitles(callToApi) {
+      axios
+        .get(callToApi)
+        .then((response) => {
+          // questo codice viene esequito se la chiamata all'API rende 200 e va a buon fine
+          const foundFilm = response.data.results.map((movie) => {
+            const {
+              id,
+              title,
+              original_title,
+              original_language,
+              vote_average,
+            } = movie;
+            return {
+              id,
+              title,
+              original_title,
+              original_language,
+              vote_average,
+            };
+          });
+
+          this.results = foundFilm;
+        })
+
+        // viene eseguito a un errore della chiamata
+        .catch((error) => {
+          console.error(error);
+          // store.cards = [];
+        })
+
+        // viene eseguito sempre
+        .finally(() => {});
+    },
+  },
 
   //   created(): {},
 
   components: {},
 
-  props: {},
+  props: {
+    apiKey: String,
+    apiUriFilm: String,
+    apiUriTV: String,
+  },
 
   emits: [],
 };
@@ -31,16 +95,22 @@ export default {
         placeholder="cerca.."
         aria-label="Recipient's username"
         aria-describedby="button-addon2"
+        v-model="serachValue"
       />
-      <button class="btn btn-primary" type="button" id="button-addon2">
+      <button
+        class="btn btn-primary"
+        type="button"
+        id="button-addon2"
+        @click="search()"
+      >
         Button
       </button>
     </div>
+    {{ serachValue }}
   </div>
 </template>
 
 <style lang="scss" scoped>
-@use "../style/general.scss" as *;
 .searchbar {
   width: 40%;
 }

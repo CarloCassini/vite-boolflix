@@ -6,6 +6,7 @@ import { reactive } from "vue";
 
 // qui dentro mettimao tutti i data globali
 export const store = reactive({
-  apiKey: "3a465dac0c2cbe37bf31eb3e12a376fd",
-  apiUri: "valore di apiUri",
+  apiKey: "api_key=3a465dac0c2cbe37bf31eb3e12a376fd",
+  apiUriFilm: "https://api.themoviedb.org/3/search/movie?",
+  apiUriTV: "https://api.themoviedb.org/3/search/tv",
 });

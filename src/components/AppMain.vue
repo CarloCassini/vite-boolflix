@@ -25,10 +25,12 @@ export default {
 <template>
   <div class="debug">
     <h1 class="container debug">main</h1>
-    <MovieList />
+
+    <section>
+      <!-- visualizzazione della movielist -->
+      <MovieList />
+    </section>
   </div>
 </template>
 
-<style lang="scss" scoped>
-// @use "../style/general.scss" as *;
-</style>
+<style lang="scss" scoped></style>

@@ -23,12 +23,17 @@ export default {
 </script>
 
 <template>
-  <div class="debug">
-    <h1 class="container debug">movie list</h1>
-    <AppCard />
+  <div class="container debug">
+    <div class="row">
+      <h1 class="container debug">movie list</h1>
+      <AppCard />
+      <AppCard />
+      <AppCard />
+      <AppCard />
+      <AppCard />
+      <AppCard />
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-@use "../style/general.scss" as *;
-</style>
+<style lang="scss" scoped></style>

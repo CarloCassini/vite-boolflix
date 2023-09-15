@@ -33,7 +33,11 @@ export default {
 
     <font-awesome-icon icon="paper-plane" class="me-5" />
   </h1>
-  <AppHeader />
+  <AppHeader
+    :apiUriFilm="store.apiUriFilm"
+    :apiUriTV="store.apiUriTV"
+    :apiKey="store.apiKey"
+  />
   <AppMain />
 </template>
 
