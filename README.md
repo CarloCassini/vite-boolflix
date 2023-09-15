@@ -1,6 +1,6 @@
 # booflix
 
-## Milestone 0:
+## Milestone 0: (fatto)
 
 Progettare la struttura del global state sulla linea degli esercizi svolti nei giorni
 precedenti.
@@ -28,6 +28,19 @@ film trovato:
 2. Titolo Originale
 3. Lingua
 4. Voto
+
+### svolgimento:
+
+- Creare un layout base con una searchbar (una input e un button) in cui possiamo
+  scrivere completamente o parzialmente il nome di un film. - la inserisco grazie a bootstrap nel modulo ----
+- scrivere completamente o parzialmente il nome di un film. Possiamo, cliccando il bottone.
+  - lo gestisco grazie al v-model nella label del form in questione
+    - questo v-model valorizzerà una variabile denominata searchValue
+- cercare sull’API tutti i film che contengono ciò che ha scritto l’utente.
+  - eseguo una chiamata ad axios per recuperare l'array dei film cercati
+  - mappo la risposta per avere solo le variabili dell'array che mi interessano (vedi elenco nella consegna)
+- Vogliamo dopo la risposta dell’API visualizzare a schermo i valori per ogni film trovato:
+  - al momento le stampo nelle card grazie al v-for e alla scrittura tra le {{ }}
 
 ## Milestone 2:
 
