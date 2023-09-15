@@ -141,14 +141,6 @@ export default {
         Button
       </button>
     </div>
-    <div class="debug">
-      <h1>zona films</h1>
-      {{ resultsMovie }}
-    </div>
-    <div class="debug">
-      <h1>zona serie tv</h1>
-      {{ resultsTV }}
-    </div>
   </div>
 </template>
 

@@ -27,11 +27,6 @@ export default {
     <div class="row">
       <h1 class="container debug">movie list</h1>
       <AppCard />
-      <AppCard />
-      <AppCard />
-      <AppCard />
-      <AppCard />
-      <AppCard />
     </div>
   </div>
 </template>
