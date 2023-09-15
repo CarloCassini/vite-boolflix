@@ -28,7 +28,7 @@ export default {
 
     <section>
       <!-- visualizzazione della movielist -->
-      <MovieList />
+      <MovieList v-if="store.movieSearched[0] || store.tvSearched[0]" />
     </section>
   </div>
 </template>

@@ -23,6 +23,7 @@ export default {
 
 <template>
   <h3>zona film</h3>
+  <h5>trovati {{ store.movieSearched.length }} elementi</h5>
   <div class="col-3 my-2" v-for="movie in store.movieSearched" :key="movie.id">
     <div class="card" style="width: 18rem">
       <img src="..." class="card-img-top" alt="..." />
@@ -36,6 +37,7 @@ export default {
   </div>
 
   <h3>zona serie tv</h3>
+  <h5>trovati {{ store.tvSearched.length }} elementi</h5>
   <div class="col-3 my-2" v-for="tvSerie in store.tvSearched" :key="tvSerie.id">
     <div class="card" style="width: 18rem">
       <img src="..." class="card-img-top" alt="..." />
