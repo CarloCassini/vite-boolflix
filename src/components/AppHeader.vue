@@ -13,9 +13,6 @@ export default {
       resultsTV: [],
 
       serachValue: "",
-      newCallToApi: "",
-      srcMovie: false,
-      srcTV: false,
     };
   },
 
@@ -24,12 +21,12 @@ export default {
       // ricerca Film
 
       this.srcMovie = true;
-      this.fetchTitles(this.createUrlMovie());
+      this.fetchTitlesMovies(this.createUrlMovie());
       this.srcMovie = false;
 
       this.srcTV = true;
       // ricerca serieTV
-      this.fetchTitles(this.createUrlTV());
+      this.fetchTitlesTV(this.createUrlTV());
 
       this.srcTV = false;
     },
@@ -47,57 +44,58 @@ export default {
       return newCallToApi;
     },
 
-    fetchTitles(callToApi) {
-      console.log("yyy");
-      console.log(this.srcMovie);
-      console.log(this.srcTV);
-      console.log("yyy");
+    fetchTitlesMovies(callToApi) {
       axios
         .get(callToApi)
         .then((response) => {
           // questo codice viene esequito se la chiamata all'API rende 200 e va a buon fine
 
-          if (this.srcMovie) {
-            console.log("aaa");
-            const foundFilm = response.data.results.map((movie) => {
-              const {
-                id,
-                title,
-                original_title,
-                original_language,
-                vote_average,
-              } = movie;
-              return {
-                id,
-                title,
-                original_title,
-                original_language,
-                vote_average,
-              };
-            });
-            this.resultsMovie = foundFilm;
-          }
+          const foundFilm = response.data.results.map((movie) => {
+            const {
+              id,
+              title,
+              original_title,
+              original_language,
+              vote_average,
+            } = movie;
+            return {
+              id,
+              title,
+              original_title,
+              original_language,
+              vote_average,
+            };
+          });
+          this.resultsMovie = foundFilm;
+        })
 
-          if (this.srcTV) {
-            console.log("bbb");
-            const foundFilmTV = response.data.results.map((filmTV) => {
-              const {
-                id,
-                name,
-                original_name,
-                original_language,
-                vote_average,
-              } = filmTV;
-              return {
-                id,
-                title: name,
-                original_title: original_name,
-                original_language,
-                vote_average,
-              };
-            });
-            this.resultsTV = foundFilmTV;
-          }
+        // viene eseguito a un errore della chiamata
+        .catch((error) => {
+          console.error(error);
+          // store.cards = [];
+        })
+
+        // viene eseguito sempre
+        .finally(() => {});
+    },
+    fetchTitlesTV(callToApi) {
+      axios
+        .get(callToApi)
+        .then((response) => {
+          // questo codice viene esequito se la chiamata all'API rende 200 e va a buon fine
+
+          const foundFilmTV = response.data.results.map((filmTV) => {
+            const { id, name, original_name, original_language, vote_average } =
+              filmTV;
+            return {
+              id,
+              title: name,
+              original_title: original_name,
+              original_language,
+              vote_average,
+            };
+          });
+          this.resultsTV = foundFilmTV;
         })
 
         // viene eseguito a un errore della chiamata
