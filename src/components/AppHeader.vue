@@ -1,6 +1,6 @@
 <script>
 // importo lo store ((non voglio usare lo store a questo livello))
-// import { store } from "../data/store";
+import { store } from "../data/store";
 
 // importo axios
 import axios from "axios";
@@ -8,7 +8,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      // store,
+      store,
       resultsMovie: [],
       resultsTV: [],
 
@@ -19,16 +19,10 @@ export default {
   methods: {
     search() {
       // ricerca Film
-
-      this.srcMovie = true;
       this.fetchTitlesMovies(this.createUrlMovie());
-      this.srcMovie = false;
 
-      this.srcTV = true;
       // ricerca serieTV
       this.fetchTitlesTV(this.createUrlTV());
-
-      this.srcTV = false;
     },
 
     createUrlMovie() {
@@ -67,6 +61,7 @@ export default {
             };
           });
           this.resultsMovie = foundFilm;
+          store.movieSearched = this.resultsMovie;
         })
 
         // viene eseguito a un errore della chiamata
@@ -78,6 +73,7 @@ export default {
         // viene eseguito sempre
         .finally(() => {});
     },
+
     fetchTitlesTV(callToApi) {
       axios
         .get(callToApi)
@@ -96,6 +92,7 @@ export default {
             };
           });
           this.resultsTV = foundFilmTV;
+          store.tvSearched = this.resultsTV;
         })
 
         // viene eseguito a un errore della chiamata
@@ -119,7 +116,7 @@ export default {
     apiUriTV: String,
   },
 
-  emits: [],
+  emits: ["cerca-film"],
 };
 </script>
 

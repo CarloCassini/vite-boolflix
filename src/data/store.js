@@ -9,4 +9,6 @@ export const store = reactive({
   apiKey: "api_key=3a465dac0c2cbe37bf31eb3e12a376fd",
   apiUriFilm: "https://api.themoviedb.org/3/search/movie?",
   apiUriTV: "https://api.themoviedb.org/3/search/tv?",
+  movieSearched: [],
+  tvSearched: [],
 });

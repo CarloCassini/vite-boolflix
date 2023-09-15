@@ -16,7 +16,7 @@ precedenti.
     - creo un file scss generale (fatto)
     - creo e collego le componenti del progetto
 
-## Milestone 1:
+## Milestone 1: (fatto)
 
 Creare un layout base con una searchbar (una input e un button) in cui possiamo
 scrivere completamente o parzialmente il nome di un film. Possiamo, cliccando il

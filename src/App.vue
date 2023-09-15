@@ -15,7 +15,11 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    uploadStore(resultsMovie, resultsTV) {
+      store.tvSearched = resultsTV;
+    },
+  },
 
   // created(): {},
 
@@ -37,6 +41,7 @@ export default {
     :apiUriFilm="store.apiUriFilm"
     :apiUriTV="store.apiUriTV"
     :apiKey="store.apiKey"
+    @cerca-film="uploadStore"
   />
   <AppMain />
 </template>
