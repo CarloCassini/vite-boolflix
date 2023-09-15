@@ -1,5 +1,9 @@
 import { createApp } from "vue";
+// importo il css di bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
+// importo le regole javascript di bootstap
+import * as bootstrap from "bootstrap";
+
 import App from "./App.vue";
 
 /* import the fontawesome core */

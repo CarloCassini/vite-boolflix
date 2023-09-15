@@ -12,7 +12,7 @@ export default {
 
   methods: {},
 
-  // created: {},
+  //   created(): {},
 
   components: { AppCard },
 
@@ -29,6 +29,6 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../style/general.scss" as *;
 </style>

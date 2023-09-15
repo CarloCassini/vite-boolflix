@@ -17,7 +17,7 @@ export default {
 
   methods: {},
 
-  // created: {},
+  // created(): {},
 
   components: { AppHeader, AppMain },
 

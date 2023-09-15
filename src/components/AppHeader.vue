@@ -11,7 +11,7 @@ export default {
 
   methods: {},
 
-  // created: {},
+  //   created(): {},
 
   components: {},
 
@@ -25,6 +25,6 @@ export default {
   <h1 class="container debug">header</h1>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../style/general.scss" as *;
 </style>

@@ -12,7 +12,7 @@ export default {
 
   methods: {},
 
-  // created: {},
+  //   created(): {},
 
   components: { MovieList },
 
@@ -29,6 +29,6 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
-@use "../style/general.scss" as *;
+<style lang="scss" scoped>
+// @use "../style/general.scss" as *;
 </style>
