@@ -42,7 +42,7 @@ film trovato:
 - Vogliamo dopo la risposta dell’API visualizzare a schermo i valori per ogni film trovato:
   - al momento le stampo nelle card grazie al v-for e alla scrittura tra le {{ }}
 
-## Milestone 2:
+## Milestone 2 (fatto):
 
 Trasformiamo la stringa statica della lingua in una vera e propria bandiera della
 nazione corrispondente, gestendo il caso in cui non abbiamo la bandiera della
@@ -54,6 +54,15 @@ risposta diversi, simili ma non sempre identici)
 Qui un esempio di chiamata per le serie tv:
 https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=it_IT&query=s
 crubs
+
+### svolgimento
+
+- Trasformiamo la stringa statica della lingua in una vera e propria bandiera della
+  nazione corrispondente, gestendo il caso in cui non abbiamo la bandiera della
+  nazione ritornata dall’API (le flag non ci sono in FontAwesome).
+  - lego all'oggetto recuperato dalla API anche il valore della flag
+  - lo stampo all'interno della card
+- Allarghiamo poi la ricerca anche alle serie tv. Con la stessa azione di ricerca eccecc (fatto)
 
 ## Milestone 3:
 
