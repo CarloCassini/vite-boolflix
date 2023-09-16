@@ -1,11 +1,13 @@
 <script>
 // importo lo store
 import { store } from "../data/store";
+import { flags } from "../data/flags";
 
 export default {
   data() {
     return {
       store,
+      flags,
     };
   },
 
@@ -30,7 +32,29 @@ export default {
       <div class="card-body">
         <h5 class="card-title">{{ movie.title }}</h5>
         <p>original_title: {{ movie.original_title }}</p>
-        <p>original_language: {{ movie.original_language }}</p>
+
+        <p>original_title: {{ movie.original_language }}</p>
+        <!-- paragrafo per stampare la bandierina -->
+        <p>
+          <img
+            v-if="flags.flagsToManage.includes(movie.original_language)"
+            :src="flags.flagNotFound"
+            alt=""
+          />
+          <img
+            v-else-if="
+              movie.original_language == 'en' || movie.original_language == 'uk'
+            "
+            :src="flags.flagBase + 'gb' + '.png'"
+            alt=""
+          />
+          <img
+            v-else
+            :src="flags.flagBase + movie.original_language + '.png'"
+            alt=""
+          />
+        </p>
+
         <p>vote_average: {{ movie.vote_average }}</p>
       </div>
     </div>
@@ -44,11 +68,40 @@ export default {
       <div class="card-body">
         <h5 class="card-title">{{ tvSerie.title }}</h5>
         <p>original_title: {{ tvSerie.original_title }}</p>
-        <p>original_language: {{ tvSerie.original_language }}</p>
+        <p>original_title: {{ tvSerie.original_language }}</p>
+
+        <!-- paragrafo per stampare la bandierina -->
+        <p>
+          <img
+            v-if="flags.flagsToManage.includes(tvSerie.original_language)"
+            :src="flags.flagNotFound"
+            alt=""
+          />
+          <img
+            v-else-if="
+              tvSerie.original_language == 'en' ||
+              tvSerie.original_language == 'uk'
+            "
+            :src="flags.flagBase + 'gb' + '.png'"
+            alt=""
+          />
+          <img
+            v-else
+            :src="flags.flagBase + tvSerie.original_language + '.png'"
+            alt=""
+          />
+        </p>
+
         <p>vote_average: {{ tvSerie.vote_average }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+p {
+  img {
+    width: 10%;
+  }
+}
+</style>
