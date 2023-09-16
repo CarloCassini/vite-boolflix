@@ -33,7 +33,6 @@ export default {
         <h5 class="card-title">{{ movie.title }}</h5>
         <p>original_title: {{ movie.original_title }}</p>
 
-        <p>original_title: {{ movie.original_language }}</p>
         <!-- paragrafo per stampare la bandierina -->
         <p>
           <img
@@ -68,7 +67,6 @@ export default {
       <div class="card-body">
         <h5 class="card-title">{{ tvSerie.title }}</h5>
         <p>original_title: {{ tvSerie.original_title }}</p>
-        <p>original_title: {{ tvSerie.original_language }}</p>
 
         <!-- paragrafo per stampare la bandierina -->
         <p>
