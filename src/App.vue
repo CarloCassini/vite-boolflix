@@ -36,7 +36,6 @@ export default {
     app
 
     <font-awesome-icon icon="paper-plane" class="me-5" />
-    <font-awesome-icon icon="fa-solid fa-star" />
   </h1>
   <AppHeader
     :apiUriFilm="store.apiUriFilm"

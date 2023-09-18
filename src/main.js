@@ -19,11 +19,12 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-// import { faStar } from "@fortawesome/free-regular-svg-icons";
+// bisogna inserire un alias per inserire la stellina in questione
+import { faStar as faStarLine } from "@fortawesome/free-regular-svg-icons";
 
 /* add icons to the library */
 // ogni icona aggiunta alla libreria (ccn.ADD) va aggiunta a questa riga di codice.
-library.add(faEnvelope, faPaperPlane, faStar);
+library.add(faEnvelope, faPaperPlane, faStar, faStarLine);
 
 // per usare font awerome devo agganciarmi a un componente al quale aggiungerò tutti gli elementi che mi serviranno
 

@@ -23,6 +23,12 @@ export default {
         "https://image.tmdb.org/t/p/w342/" + this.elemento.poster_path;
       return path;
     },
+
+    starVote() {
+      const diviso = parseInt(this.elemento.vote_average / 2);
+
+      return diviso;
+    },
   },
 
   props: {
@@ -63,6 +69,13 @@ export default {
       </p>
 
       <p>vote_average: {{ elemento.vote_average }}</p>
+      <p>
+        <span v-for="(stella, index) in 5">
+          <font-awesome-icon
+            :icon="index < starVote ? 'fa-solid fa-star' : 'fa-regular fa-star'"
+          />
+        </span>
+      </p>
     </div>
   </div>
 </template>
