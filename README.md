@@ -91,8 +91,8 @@ piene (o mezze vuote :P)
 
 -Trasformiamo poi il voto da 1 a 10 decimale in un numero intero da 1 a 5, (stelle piene e vuote)
 
-- collego le stelline di fontawesome al progetto
-- stampo le stelline sotto il valore della votazione.
+- collego le stelline di fontawesome al progetto(fatto)
+- stampo le stelline sotto il valore della votazione.(fatto)
 
 ## Milestone 4:
 
