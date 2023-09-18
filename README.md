@@ -105,3 +105,7 @@ la poster_path con w342)
 ● Andando con il mouse sopra una card (on hover), appaiono le informazioni
 aggiuntive già prese nei punti precedenti più la overview
 Mockup:
+
+### SVOLGIMENTO:
+
+- creare il layout

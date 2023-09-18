@@ -32,11 +32,6 @@ export default {
 </script>
 
 <template>
-  <h1 class="container debug text-center">
-    app
-
-    <font-awesome-icon icon="paper-plane" class="me-5" />
-  </h1>
   <AppHeader
     :apiUriFilm="store.apiUriFilm"
     :apiUriTV="store.apiUriTV"

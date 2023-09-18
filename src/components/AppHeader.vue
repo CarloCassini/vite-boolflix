@@ -130,30 +130,50 @@ export default {
 </script>
 
 <template>
-  <!-- ad app header diamo l'onere di chiamare i films -->
-  <div class="container">
-    <div class="input-group ms-auto mb-3 searchbar">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="cerca.."
-        aria-label="Recipient's username"
-        aria-describedby="button-addon2"
-        v-model="serachValue"
-      />
-      <button
-        class="btn btn-primary"
-        type="button"
-        id="button-addon2"
-        @click="search()"
-      >
-        Button
-      </button>
+  <section>
+    <!-- ad app header diamo l'onere di chiamare i films -->
+    <div class="container header py-3">
+      <div class="header-text">BOOFLIX</div>
+      <div class="input-group ms-auto searchbar">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="cerca.."
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          v-model="serachValue"
+        />
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="button-addon2"
+          @click="search()"
+        >
+          Button
+        </button>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
+section {
+  display: flex;
+  align-content: center;
+  background-color: black;
+  min-height: 10vh;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  .header-text {
+    font-size: xx-large;
+    color: red;
+    font-weight: bolder;
+  }
+}
 .searchbar {
   width: 40%;
 }

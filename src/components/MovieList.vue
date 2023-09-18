@@ -23,9 +23,9 @@ export default {
 </script>
 
 <template>
-  <div class="container debug">
+  <div class="container">
     <div class="row justify-content-between">
-      <h1 class="container debug">movie list</h1>
+      <h1 class="container">movie list</h1>
 
       <h3>zona film</h3>
       <h5>trovati {{ store.movieSearched.length }} elementi</h5>
