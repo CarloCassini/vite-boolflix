@@ -82,6 +82,18 @@ lasciando le restanti vuote (troviamo le icone in FontAwesome).
 Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezze
 piene (o mezze vuote :P)
 
+### svolgimento
+
+- In questa milestone come prima cosa aggiungiamo la copertina del film o della serie
+  - aggiungo anche il valore della copertina dentro l'elemento reso dall'api
+  - costruisco il link della copertina grazie a una computed.
+  - stampo la copertina facendo bind in un tag img
+
+-Trasformiamo poi il voto da 1 a 10 decimale in un numero intero da 1 a 5, (stelle piene e vuote)
+
+- collego le stelline di fontawesome al progetto
+- stampo le stelline sotto il valore della votazione.
+
 ## Milestone 4:
 
 Trasformiamo quello che abbiamo fatto fino ad ora in una vera e propria webapp,

@@ -51,6 +51,7 @@ export default {
               original_title,
               original_language,
               vote_average,
+              poster_path,
             } = movie;
             return {
               id,
@@ -58,6 +59,7 @@ export default {
               original_title,
               original_language,
               vote_average,
+              poster_path,
             };
           });
           this.resultsMovie = foundFilm;
