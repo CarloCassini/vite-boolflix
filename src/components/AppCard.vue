@@ -40,8 +40,10 @@ export default {
 </script>
 
 <template>
-  <div class="card" style="width: 18rem">
-    <img :src="pathImage" class="card-img-top" alt="..." />
+  <div class="card card-display p-0" style="width: 18rem">
+    <div>
+      <img :src="pathImage" class="card-img-top flip-card" alt="..." />
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{ elemento.title }}</h5>
       <p>original_title: {{ elemento.original_title }}</p>
@@ -81,6 +83,28 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.card-display {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+.flip-card {
+  position: absolute;
+  // width: 25%;
+  height: 400px;
+  aspect-ratio: 1;
+  img {
+  }
+
+  &:hover {
+    transform: rotatey(90deg);
+  }
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+.card-body {
+  text-align: center;
+}
 p {
   img {
     width: 10%;
