@@ -18,7 +18,11 @@ export default {
   components: {},
 
   computed: {
-    // gigio()
+    pathImage() {
+      const path =
+        "https://image.tmdb.org/t/p/w342/" + this.elemento.poster_path;
+      return path;
+    },
   },
 
   props: {
@@ -31,7 +35,7 @@ export default {
 
 <template>
   <div class="card" style="width: 18rem">
-    <img src="..." class="card-img-top" alt="..." />
+    <img :src="pathImage" class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ elemento.title }}</h5>
       <p>original_title: {{ elemento.original_title }}</p>

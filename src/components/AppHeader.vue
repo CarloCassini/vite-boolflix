@@ -83,14 +83,21 @@ export default {
           // questo codice viene esequito se la chiamata all'API rende 200 e va a buon fine
 
           const foundFilmTV = response.data.results.map((filmTV) => {
-            const { id, name, original_name, original_language, vote_average } =
-              filmTV;
+            const {
+              id,
+              name,
+              original_name,
+              original_language,
+              vote_average,
+              poster_path,
+            } = filmTV;
             return {
               id,
               title: name,
               original_title: original_name,
               original_language,
               vote_average,
+              poster_path,
             };
           });
           this.resultsTV = foundFilmTV;

@@ -85,9 +85,9 @@ piene (o mezze vuote :P)
 ### svolgimento
 
 - In questa milestone come prima cosa aggiungiamo la copertina del film o della serie
-  - aggiungo anche il valore della copertina dentro l'elemento reso dall'api
-  - costruisco il link della copertina grazie a una computed.
-  - stampo la copertina facendo bind in un tag img
+  - aggiungo anche il valore della copertina dentro l'elemento reso dall'api(fatto)
+  - costruisco il link della copertina grazie a una computed. (fatto)
+  - stampo la copertina facendo bind in un tag img(fatto)
 
 -Trasformiamo poi il voto da 1 a 10 decimale in un numero intero da 1 a 5, (stelle piene e vuote)
 
